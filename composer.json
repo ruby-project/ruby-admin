@@ -1,0 +1,43 @@
+{
+    "name": "ruby-project/ruby-admin",
+    "description": "Admin for ruby project",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "framework",
+        "zf2",
+        "hieuit7",
+        "ruby",
+        "admin"
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/ruby-project/ruby-admin"
+        }
+    ],
+    "version": "1.0.0",
+    "homepage": "http://nguyenminhhieu.net/",
+    "require": {
+        "php": ">=5.5",
+        "doctrine/orm": "^2.5",
+        "doctrine/doctrine-orm-module": "dev-master",
+        "symfony/yaml": "^2.7",
+        "zendframework/zend-console": "^2.5",
+        "doctrine/mongodb-odm": "~1.0",
+        "doctrine/doctrine-mongo-odm-module": "^0.9.1"
+    },
+    "suggest": {
+        "ext-memcache": "Required for memcache",
+        "ext-mongo": "Requere mongo ext for mongodb"
+    },
+    "require-dev": {
+        "zendframework/zendframework": "~2.5",
+        "zendframework/zend-developer-tools": "dev-master",
+        "bjyoungblood/BjyProfiler": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ruby": "src/"
+        }
+    }
+}

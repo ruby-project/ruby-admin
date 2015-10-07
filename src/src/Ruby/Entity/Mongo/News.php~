@@ -1,0 +1,73 @@
+<?php
+
+/*
+ * Copyright (C) 2015 hieun
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+namespace Application\Entity\Mongo;
+
+use Doctrine\ODM\MongoDB\Mapping\Annotations as ODM;
+
+/**
+ * Description of News
+ *
+ * @author hieun
+ */
+
+/**
+ * @ODM\Document(db="social",collection="news")
+ */
+class News {
+
+    /**
+     *
+     * @var id
+     * @ODM\Id
+     * @ODM\Index(unique=true, order="asc")
+     */
+    private $id;
+
+    /**
+     * @var string
+     * @ODM\Field(type="string")
+     */
+    private $name;
+
+    /**
+     * @var string
+     * @ODM\Field(type="string")
+     */
+    private $alias;
+
+    /**
+     * @var int
+     * @ODM\Field(type="int")
+     */
+    private $state;
+
+    /**
+     * @var int
+     * @ODM\Field(type="boolean")
+     */
+    private $featured;
+
+    /**
+     * @var \Application\Entity\Mongo\Categories
+     * @ODM\ReferenceOne(targetDocument="Application\Entity\Mongo\Categories", cascade={"persist"})
+     * @ODM\Index(unique=true, order="asc")
+     */
+    private $category;
+}
