@@ -15,6 +15,7 @@
             "url": "https://github.com/ruby-project/ruby-admin"
         }
     ],
+    "minimum-stability": "dev",
     "homepage": "http://nguyenminhhieu.net/",
     "require": {
         "php": ">=5.5",
