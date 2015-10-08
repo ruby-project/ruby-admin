@@ -53,30 +53,7 @@ return array(
             __DIR__ . '/../view',
         ),
     ),
-    'doctrine' => array(
-        'driver' => array(
-            'application_entities' => array(
-                'class' => 'Doctrine\ORM\Mapping\Driver\AnnotationDriver',
-                'cache' => 'array',
-                'paths' => array(__DIR__ . '/../src/Application/Entity')
-            ),
-            'orm_default' => array(
-                'drivers' => array(
-                    'Application\Entity' => 'application_entities',
-                    
-                )
-            ),
-            'mongo_db_document' => array(
-                'class' => 'Doctrine\ODM\MongoDB\Mapping\Driver\AnnotationDriver',
-                'paths' => __DIR__ . '/../src/Application/Entity/Mongo'
-            ),
-            'odm_default' => array(
-                'drivers' => array(
-                    'Application\Entity\Mongo' => 'mongo_db_document'
-                )
-            )
-        )
-    ),
+    
     // Placeholder for console routes
     'console' => array(
         'router' => array(
