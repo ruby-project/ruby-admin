@@ -15,8 +15,8 @@ return array(
         ),
         'factories' => array(
             'translator' => 'Zend\Mvc\Service\TranslatorServiceFactory',
-            'Zend\Db\Adapter\Adapter' => 'Application\Services\DbProfilerFactory',
-            'my_redis_alias' => 'Application\Services\RedisDoctrineFactory',
+            'Zend\Db\Adapter\Adapter' => 'Ruby\Services\DbProfilerFactory',
+            'my_redis_alias' => 'Ruby\Services\RedisDoctrineFactory',
             'navigation' => 'Ruby\Services\NavigationFactory'
         ),
     ),
