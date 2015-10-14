@@ -26,15 +26,17 @@ class Module {
 
     public function setLayout($e) {
     	echo "<pre>";
-    	print_r($e);
+    	print_r(get_class($e));
     	echo "</pre>";
     	exit;
         $controller = $e->getTarget();
+        
         $controllerClass = get_class($controller);
         $moduleNamespace = substr($controllerClass, strpos($controllerClass, '\\'));
         $moduleNamespace = substr($moduleNamespace, 1);
         $moduleNamespace = substr($moduleNamespace, 0, strpos($moduleNamespace, '\\'));
         $config = $e->getApplication()->getServiceManager()->get('config');
+        
         
         if (isset($config['view_manager']['template_map'])) {
             $controller->layout(strtolower($moduleNamespace));
