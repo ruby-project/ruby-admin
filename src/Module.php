@@ -25,8 +25,10 @@ class Module {
     }
 
     public function setLayout($e) {
+    	
+    	$layout = $e->getApplication()->getServiceManager()->get('layout');
     	echo "<pre>";
-    	print_r(get_class_methods(get_class($e->getApplication()->getServiceManager())));
+    	print_r(get_class_methods(get_class($layout)));
     	echo "</pre>";
     	exit;
         $controller = $e->getTarget();
