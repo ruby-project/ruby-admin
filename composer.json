@@ -13,6 +13,10 @@
         {
             "type": "vcs",
             "url": "https://github.com/ruby-project/ruby-admin"
+        },
+        {
+        	"type":"vcs",
+        	"url": "ruby-project/ruby-admin"
         }
     ],
     "minimum-stability": "dev",
